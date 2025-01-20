@@ -21,8 +21,10 @@ Epochs: 1000.
 
 During training, the cost (Mean Squared Error) was calculated and printed every 100 epochs. The decreasing trend in cost demonstrates the learning progress of the model:
 
-Sample Cost Output:
-![image](https://github.com/user-attachments/assets/141f9a8f-5ddb-419a-9804-c470f20c6a6b)
+Cost Output:
+
+![image](https://github.com/user-attachments/assets/12d7759d-9910-4f30-a4e6-e322a555e986)
+
 Final Results
 
 After training, the model's performance was evaluated using the Mean Squared Error (MSE) on the dataset:
