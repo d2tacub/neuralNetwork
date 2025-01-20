@@ -29,7 +29,7 @@ Final Results
 
 After training, the model's performance was evaluated using the Mean Squared Error (MSE) on the dataset:
 
-Final Mean Squared Error: 0.0002
+Final Mean Squared Error: 0.1953
 
 The low MSE indicates that the neural network effectively captured the linear relationship between the input and target values, even with added noise.
 
