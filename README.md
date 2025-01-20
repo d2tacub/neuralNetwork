@@ -1,6 +1,6 @@
 This repository demonstrates a custom implementation of a simple neural network (Multi-Layer Perceptron) for solving regression problems. The neural network is developed entirely from scratch in Python using NumPy for mathematical operations. The primary objective is to predict continuous target values based on input features, using key neural network components like forward propagation, backward propagation, and parameter updates.
 
-Training Process
+Training Process:
 
 The neural network was trained on a generated dataset with a linear relationship (
 ). Below are the details of the training:
