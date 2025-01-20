@@ -1,80 +1,38 @@
-# neuralNetwork
-Overview
-This repository contains an implementation of a simple neural network (Multi-Layer Perceptron) for regression tasks. The neural network is built from scratch in Python, demonstrating the fundamentals of how neural networks operate without relying on high-level machine learning libraries such as TensorFlow, Keras, or PyTorch. This project uses NumPy for numerical operations.
+Training Process
 
-Brief
-The neural network is designed to predict continuous values for regression problems. The implementation involves manual development of the key components of a neural network, including forward propagation, backward propagation, gradient computation, and parameter updates. The Mean Squared Error (MSE) is used as the loss function.
+The neural network was trained on a generated dataset with a linear relationship (
+). Below are the details of the training:
 
-Data Description
+Input Features: 1 feature.
 
-Input Data: Randomly generated numerical data representing one feature.
+Target Values: Continuous target values with Gaussian noise.
 
-Output Data: Continuous target values calculated based on a linear relationship with added noise.
+Training Configuration:
 
-Dataset Properties:
+1 input neuron.
 
-Input: 500 examples, each with 1 feature.
+10 neurons in the hidden layer with ReLU activation.
 
-Target: Continuous values calculated using the formula: , where  is random Gaussian noise.
+1 output neuron with linear activation.
 
-Approach
+Learning rate: 0.01.
 
-Network Design:
+Epochs: 1000.
 
-Input Layer: 1 neuron (for the single feature).
+During training, the cost (Mean Squared Error) was calculated and printed every 100 epochs. The decreasing trend in cost demonstrates the learning progress of the model:
 
-Hidden Layer: 10 neurons using ReLU activation.
+Sample Cost Output:
+![image](https://github.com/user-attachments/assets/141f9a8f-5ddb-419a-9804-c470f20c6a6b)
+Final Results
 
-Output Layer: 1 neuron with linear activation for regression output.
+After training, the model's performance was evaluated using the Mean Squared Error (MSE) on the dataset:
 
-Implementation Details:
+Final Mean Squared Error: 0.0002
 
-Parameter Initialization: Random initialization of weights and biases for each layer.
+The low MSE indicates that the neural network effectively captured the linear relationship between the input and target values, even with added noise.
 
-Forward Propagation: Computation of activations through the layers, using ReLU for hidden layers and a linear output.
+Prediction Analysis
 
-Loss Function: Mean Squared Error (MSE) to measure the error between predicted and actual target values.
+The model's predictions closely matched the true target values, demonstrating its ability to generalize the learned relationship.
 
-Backward Propagation: Gradient computation using the chain rule for parameter optimization.
 
-Parameter Updates: Updating weights and biases using gradient descent.
-
-Training:
-
-The model is trained iteratively over a specified number of epochs, with the cost computed at each iteration to monitor convergence.
-
-Questions for Analysis
-
-Can a manually implemented neural network learn and predict a simple linear regression relationship?
-
-How does the network’s performance vary with different hyperparameters (e.g., learning rate, number of hidden units)?
-
-What insights can be drawn about the underlying relationship between input and output data?
-
-Results
-
-Performance: The network effectively learns the linear relationship, achieving a low Mean Squared Error (MSE) after training.
-
-Cost Trend: The cost steadily decreases during training, reflecting successful optimization.
-
-Predictions: The predicted outputs closely align with the true target values, demonstrating accurate regression.
-
-Insights
-
-The neural network successfully models the linear relationship, even with noisy data.
-
-The use of ReLU activation in hidden layers helps in modeling potential non-linear features, though it’s not essential for this task.
-
-Careful tuning of learning rate and weight initialization is crucial for convergence and stability.
-
-Recommendations
-
-Scalability: Extend this implementation to handle more complex datasets with multiple features and examples.
-
-Regularization: Add techniques such as L2 regularization or dropout to improve generalization on larger datasets.
-
-Advanced Architectures: Incorporate additional hidden layers or neurons for more complex regression tasks.
-
-Optimization Algorithms: Experiment with optimization algorithms like Adam or RMSprop for faster convergence.
-
-Performance Benchmarking: Compare this custom implementation with high-level libraries to evaluate performance and computational efficiency.
